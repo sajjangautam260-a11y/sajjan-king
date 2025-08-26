@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FF Elite Pass</title>
+  <style>
+    body {
+      background-image: url("dragon-bg.png"); /* dragon fire as site background */
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .title-box {
+      text-align: center;
+      padding: 20px 40px;
+      border: 3px solid #00aaff;
+      background: rgba(0, 0, 50, 0.6);
+      margin: 40px auto;
+      width: fit-content;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00aaff, 0 0 40px #0088ff;
+      color: #00ccff;
+      font-size: 28px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section {
+      display: none;
+      margin: 40px auto;
+      width: 90%;
+      border: 3px solid #00aaff;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 20px #00aaff, 0 0 40px #0088ff;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+
+    .section.active {
+      display: block;
+    }
+
+    .watch-title {
+      color: yellow;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 2px solid #00ccff;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ccff;
+    }
+
+    .nav-buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: blueviolet;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: darkviolet;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Landing Page -->
+  <div class="title-box">
+    <h1>Elite Pass</h1>
+  </div>
+
+  <div id="landing" class="section active">
+    <h2>Welcome!</h2>
+    <p>🔥 To see 1 to 4 Elite Pass bundles click below 🔥</p>
+    <button id="startBtn">Click Here</button>
+  </div>
+
+  <!-- First Elite Pass with ALL Bundles -->
+  <div class="section" id="pass1" style="background-image:url('d462ff5b-6ff3-4ad2-89a6-3bee23f1fd71.png'); background-size:cover; background-position:center;">
+    <h2>First Elite Pass (Sakura)</h2>
+    <p class="watch-title">To Watch videos click the pictures below</p>
+
+    <div class="gallery">
+      <a href="https://youtu.be/z_3r-Ak9nWU?si=ESx4TGE8aUBwsrBJ" target="_blank">
+        <img src="1.webp" alt="First Elite Pass">
+      </a>
+      <a href="https://youtu.be/quu_Gn7tvLo?si=PPQRrHPOGFKgx5GC" target="_blank">
+        <img src="2.webp" alt="Second Elite Pass">
+      </a>
+      <a href="https://youtu.be/4JzGjpZdnts?si=Vka1m-aiLMi1f-Yr" target="_blank">
+        <img src="3.webp" alt="Third Elite Pass">
+      </a>
+      <a href="https://youtu.be/Nrpymwju3h4?si=DqE2CjoVUMJIYcmB" target="_blank">
+        <img src="EPS4.webp" alt="Fourth Elite Pass">
+      </a>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="next1">Next ➡</button>
+    </div>
+  </div>
+
+  <!-- Pass 2 -->
+  <div class="section" id="pass2">
+    <h2>Second Elite Pass</h2>
+    <p class="watch-title">To Watch video Click The Picture</p>
+    <a href="https://youtu.be/quu_Gn7tvLo?si=PPQRrHPOGFKgx5GC" target="_blank">
+      <img src="2.webp" alt="Second Elite Pass">
+    </a>
+    <div class="nav-buttons">
+      <button id="prev2">⬅ Previous</button>
+      <button id="next2">Next ➡</button>
+    </div>
+  </div>
+
+  <!-- Pass 3 -->
+  <div class="section" id="pass3">
+    <h2>Third Elite Pass</h2>
+    <p class="watch-title">To Watch video Click The Picture</p>
+    <a href="https://youtu.be/4JzGjpZdnts?si=Vka1m-aiLMi1f-Yr" target="_blank">
+      <img src="3.webp" alt="Third Elite Pass">
+    </a>
+    <div class="nav-buttons">
+      <button id="prev3">⬅ Previous</button>
+      <button id="next3">Next ➡</button>
+    </div>
+  </div>
+
+  <!-- Pass 4 -->
+  <div class="section" id="pass4">
+    <h2>Fourth Elite Pass</h2>
+    <p class="watch-title">To Watch video Click The Picture</p>
+    <a href="https://youtu.be/Nrpymwju3h4?si=DqE2CjoVUMJIYcmB" target="_blank">
+      <img src="EPS4.webp" alt="Fourth Elite Pass">
+    </a>
+    <div class="nav-buttons">
+      <button id="prev4">⬅ Previous</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sections = document.querySelectorAll(".section");
+
+      function showSection(id) {
+        sections.forEach(sec => sec.classList.remove("active"));
+        document.getElementById(id).classList.add("active");
+      }
+
+      // Start button
+      document.getElementById("startBtn").addEventListener("click", function() {
+        showSection("pass1");
+      });
+
+      // Navigation
+      document.getElementById("next1").addEventListener("click", function() {
+        showSection("pass2");
+      });
+
+      document.getElementById("prev2").addEventListener("click", function() {
+        showSection("pass1");
+      });
+      document.getElementById("next2").addEventListener("click", function() {
+        showSection("pass3");
+      });
+
+      document.getElementById("prev3").addEventListener("click", function() {
+        showSection("pass2");
+      });
+      document.getElementById("next3").addEventListener("click", function() {
+        showSection("pass4");
+      });
+
+      document.getElementById("prev4").addEventListener("click", function() {
+        showSection("pass3");
+      });
+    });
+  </script>
+</body>
+</html>
